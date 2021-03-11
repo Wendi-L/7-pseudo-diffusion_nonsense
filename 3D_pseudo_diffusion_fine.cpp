@@ -135,7 +135,7 @@ int main(int argc, char ** argv) {
     ifs[1]->announce_recv_span( 0, steps, recv_region );
 
 	/// Define spatial and temporal samplers
-    mui::sampler_rbf<mui::demo7_config> spatial_sampler(rSampler,point3dvec,conservative,cutoff,polynomial,smoothFunc,fileAddress,readMatrix);
+    mui::sampler_rbf<mui::demo7_config> spatial_sampler(rSampler,point3dvec,conservative,cutoff,polynomial,fileAddress,readMatrix);
 	//mui::sampler_pseudo_nearest_neighbor<mui::demo7_config> spatial_sampler(rSampler);
     mui::chrono_sampler_exact<mui::demo7_config> chrono_sampler;
 

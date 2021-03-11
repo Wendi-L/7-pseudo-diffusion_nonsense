@@ -32,8 +32,6 @@ if (TARGET Eigen3::Eigen)
     target_compile_options (3D_pseudo_diffusion_fine PRIVATE -std=c++11 -O3)
     target_compile_definitions (3D_pseudo_diffusion_fine PRIVATE USE_RBF)
     target_link_libraries(3D_pseudo_diffusion_fine ${MPI_LIBRARIES} Eigen3::Eigen)
-    ADD_EXECUTABLE(3D_pseudo_diffusion_standalone 3D_pseudo_diffusion_standalone.cpp)
-    target_compile_options (3D_pseudo_diffusion_standalone PRIVATE -std=c++11 -O3)
 
     if(MPI_COMPILE_FLAGS)
       set_target_properties(3D_pseudo_diffusion_coarse PROPERTIES
