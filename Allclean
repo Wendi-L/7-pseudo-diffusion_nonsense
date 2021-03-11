@@ -1,0 +1,19 @@
+#!/bin/bash
+
+make clean
+
+rm make.log
+
+rm parallel.log
+
+rm -r CMakeFiles
+
+rm CMakeCache.*
+
+rm Makefile
+
+rm -r coupling_results
+rm -r rbfCoarseMatrix
+rm -r rbfFineMatrix
+
+rm *.cmake

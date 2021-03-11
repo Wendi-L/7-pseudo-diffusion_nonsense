@@ -1,0 +1,8 @@
+#!/bin/bash
+export CMAKE_INCLUDE_PATH=../../MUI
+cmake .
+
+make
+
+mpirun -np 1 ./3D_pseudo_diffusion_fine :\
+       -np 1 ./3D_pseudo_diffusion_coarse
